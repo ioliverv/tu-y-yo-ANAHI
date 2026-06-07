@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tu y Yo - A & O❤️</title>
+    <!-- Google Fonts: Inter para textos generales, Sacramento para la carta y Cinzel para títulos épicos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Great+Vibes&family=Inter:wght@300;400;600&family=Sacramento&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/scene-intro.css">
+    <link rel="stylesheet" href="css/scene-story.css">
+    <link rel="stylesheet" href="css/scene-future.css">
+    <link rel="stylesheet" href="css/scene-cards.css">
+    <link rel="stylesheet" href="css/scene-letter.css">
+    <link rel="stylesheet" href="css/scene-promises.css">
+    <link rel="stylesheet" href="css/scene-question.css">
+    <link rel="stylesheet" href="css/scene-celebration.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <meta property="og:image" content="assets/images/photo-5.png">
+</head>
+
+<body>
+
+    <!-- Fondo de Iniciales A & O -->
+    <div class="background-initials">A &amp; O</div>
+
+    <!-- Música de fondo (Il Divo - Hasta mi final) -->
+    <audio id="bg-music" src="assets/musica.m4a" loop></audio>
+
+    <!-- Fondo de Partículas y Luces de Bokeh (común para toda la experiencia) -->
+    <div class="background-overlay"></div>
+    <div id="particles-container"></div>
+
+    <!-- PANTALLA DE INICIO (Necesaria para iniciar el audio y el flujo automático) -->
+    <div id="scene-intro" class="scene active">
+        <div class="intro-content">
+            <h1 class="intro-title">Nuestra Historia</h1>
+            <p class="intro-subtitle">Una pequeña sorpresa preparada para ti...</p>
+            <button id="start-btn" class="start-button">
+                <span class="play-icon">▶</span> Comenzar
+            </button>
+        </div>
+    </div>
+
+    <!-- ESCENA 1: TEXTO INTRODUCTORIO (Narrativo y emocional) -->
+    <div id="scene-text1" class="scene">
+        <div class="text-container">
+            <p class="narrative-text greeting-text"><span class="white-heart">🤍</span> <span class="glow-name">Holaa
+                    Anahí</span> <span class="white-heart">🤍</span></p>
+            <p class="narrative-text delay-1">Hoy te tengo preparado algo muy especial</p>
+            <p class="narrative-text delay-2">Con mucho cariño Oliver ❤️</p>
+        </div>
+    </div>
+
+    <!-- ESCENA NUEVA 1: LA HISTORIA DE NUESTRAS CITAS -->
+    <div id="scene-story" class="scene">
+        <div class="story-container">
+            <!-- Nota introductoria con un diseño diferente y texto fijo -->
+            <div class="intro-note step-0">
+                <p>Para empezar... me gustaría que recordemos un poquito de los momentos que hemos vivido hasta ahora. ✨
+                </p>
+            </div>
+
+            <div class="story-card step-1">
+                <div class="card-initials">A &amp; O</div>
+                <div class="letter-ornament top">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 2, 65 2, 90 10 M50 2 C 45 10, 55 10, 50 18 M30 8 C 45 5, 55 5, 70 8"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+                <p id="story-text-1" class="typing-container"></p>
+                <div class="letter-ornament bottom">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 18, 65 18, 90 10 M50 18 C 45 10, 55 10, 50 2 M30 12 C 45 15, 55 15, 70 12"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+            </div>
+            <div class="story-card step-2">
+                <div class="card-initials">A &amp; O</div>
+                <div class="letter-ornament top">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 2, 65 2, 90 10 M50 2 C 45 10, 55 10, 50 18 M30 8 C 45 5, 55 5, 70 8"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+                <p id="story-text-2" class="typing-container"></p>
+                <div class="letter-ornament bottom">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 18, 65 18, 90 10 M50 18 C 45 10, 55 10, 50 2 M30 12 C 45 15, 55 15, 70 12"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+            </div>
+            <div class="story-card step-3">
+                <div class="card-initials">A &amp; O</div>
+                <div class="letter-ornament top">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 2, 65 2, 90 10 M50 2 C 45 10, 55 10, 50 18 M30 8 C 45 5, 55 5, 70 8"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+                <p id="story-text-3" class="typing-container"></p>
+                <div class="letter-ornament bottom">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 18, 65 18, 90 10 M50 18 C 45 10, 55 10, 50 2 M30 12 C 45 15, 55 15, 70 12"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+            </div>
+            <div class="story-card step-4">
+                <div class="card-initials">A &amp; O</div>
+                <div class="letter-ornament top">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 2, 65 2, 90 10 M50 2 C 45 10, 55 10, 50 18 M30 8 C 45 5, 55 5, 70 8"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+                <p id="story-text-4" class="typing-container"></p>
+                <div class="letter-ornament bottom">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 18, 65 18, 90 10 M50 18 C 45 10, 55 10, 50 2 M30 12 C 45 15, 55 15, 70 12"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+            </div>
+            <div class="story-card step-5">
+                <div class="card-initials">A &amp; O</div>
+                <div class="letter-ornament top">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 2, 65 2, 90 10 M50 2 C 45 10, 55 10, 50 18 M30 8 C 45 5, 55 5, 70 8"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+                <p id="story-text-5" class="typing-container"></p>
+                <div class="letter-ornament bottom">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 18, 65 18, 90 10 M50 18 C 45 10, 55 10, 50 2 M30 12 C 45 15, 55 15, 70 12"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+            </div>
+            <div class="story-card step-6">
+                <div class="card-initials">A &amp; O</div>
+                <div class="letter-ornament top">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 2, 65 2, 90 10 M50 2 C 45 10, 55 10, 50 18 M30 8 C 45 5, 55 5, 70 8"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+                <p id="story-text-6" class="typing-container"></p>
+                <div class="letter-ornament bottom">
+                    <svg viewBox="0 0 100 20" class="gold-filigree">
+                        <path d="M10 10 C 35 18, 65 18, 90 10 M50 18 C 45 10, 55 10, 50 2 M30 12 C 45 15, 55 15, 70 12"
+                            fill="none" stroke="#ffd700" stroke-width="1" stroke-linecap="round" />
+                        <circle cx="50" cy="10" r="1.5" fill="#ffd700" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESCENA INTERMEDIA: INTRODUCCIÓN A LAS RAZONES -->
+    <div id="scene-reasons-intro" class="scene">
+        <div class="intro-note step-reasons">
+            <p class="intro-subtitle delay-1"
+                style="font-size: 1.6rem; margin-top: 20px; font-style: italic; color: #fdfbf7; text-transform: none; font-family: var(--font-serif); line-height: 1.5; letter-spacing: 1px;">
+                Y así, poco a poco, fui descubriendo todas las hermosas razones por las que me enamoré de ti.
+            </p>
+        </div>
+    </div>
+
+    <!-- ESCENA NUEVA 3: RAZONES -->
+    <div id="scene-reasons" class="scene">
+        <div class="reasons-container">
+            <h2 class="reasons-title">Y descubrí tantas cosas en ti...</h2>
+            <div class="reason-bubble bubble-1">Por tu hermosa manera de pensar 💭</div>
+            <div class="reason-bubble bubble-2">Por lo mucho que disfruto platicar horas contigo 🥰</div>
+            <div class="reason-bubble bubble-3">Por la confianza inmensa que me das para ser yo mismo ❤️</div>
+            <div class="reason-bubble bubble-4">Porque a tu lado todo fluye, sin tener que pensar qué decir 🍃</div>
+            <div class="reason-bubble bubble-5">Por lo increíblemente divertida que eres 😂</div>
+            <div class="reason-bubble bubble-6">Por esa facilidad tan linda para hacerme reír siempre ✨</div>
+            <div class="reason-bubble bubble-7">Por lo increíble que se siente compartir nuestros pasatiempos juntos 🎮
+            </div>
+            <div class="reason-bubble bubble-8">Por la forma tan tierna en la que te interesas por mis gustos 🥺</div>
+            <div class="reason-bubble bubble-9">Por lo increíblemente hermosa que eres 😍</div>
+            <div class="reason-bubble bubble-10">Por tu estilo tan cool, me encanta cómo te vistes ✨</div>
+            <div class="reason-bubble bubble-11">Por tu sonrisa y esos ojos tan lindos que brillan ✨</div>
+            <div class="reason-bubble bubble-12">Por la paz que siento cuando estoy a tu lado 🕊️</div>
+            <div class="reason-bubble bubble-13">Por la forma tan linda en la que me miras 😍</div>
+            <div class="reason-bubble bubble-14">Simplemente... por ser exactamente como eres ❤️</div>
+        </div>
+    </div>
+
+    <!-- ESCENA 2: MINI TARJETAS (Polaroids que aparecen una por una) -->
+    <div id="scene-cards" class="scene">
+        <h2 class="cards-title">Cada momento a tu lado...</h2>
+        <div class="polaroid-wrapper">
+            <!-- Tarjeta 2 (izquierda) -->
+            <div class="polaroid-card" id="card-2">
+                <div class="polaroid-image-container">
+                    <img src="assets/images/Photo-1.png" alt="Caminando juntos">
+                </div>
+                <div class="polaroid-text">Caminando de la mano...</div>
+            </div>
+            <!-- Tarjeta 1 (centro destacada) -->
+            <div class="polaroid-card" id="card-1">
+                <div class="polaroid-image-container">
+                    <img src="assets/images/Photo-2.png" alt="Mirando las estrellas">
+                </div>
+                <div class="polaroid-text">Soñando despiertos...</div>
+            </div>
+            <!-- Tarjeta 3 (derecha) -->
+            <div class="polaroid-card" id="card-3">
+                <div class="polaroid-image-container">
+                    <img src="assets/images/Photo-3.png" alt="Café juntos">
+                </div>
+                <div class="polaroid-text">Compartiendo risas...</div>
+            </div>
+            <!-- Tarjeta 4 (nueva) -->
+            <div class="polaroid-card" id="card-4">
+                <div class="polaroid-image-container">
+                    <img src="assets/images/photo-4.png" alt="Momentos inolvidables">
+                </div>
+                <div class="polaroid-text">Siempre unidos...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESCENA INTERMEDIA: INTRODUCCIÓN A LAS PROMESAS -->
+    <div id="scene-promises-intro" class="scene">
+        <div class="intro-note step-promises">
+            <p
+                style="font-size: 1.8rem; margin-top: 20px; font-family: var(--font-serif); line-height: 1.6; letter-spacing: 1px; color: #fdfbf7;">
+                ¿Sabes? Me encantaría prometerte el mundo entero y que todo será siempre perfecto, pero sé que no será
+                así... Por eso, hoy quiero prometerte solo lo siguiente:
+            </p>
+        </div>
+    </div>
+
+    <!-- ESCENA NUEVA 4: PROMESAS -->
+    <div id="scene-promises" class="scene">
+        <div class="promises-container">
+            <p class="promise-text promise-1" style="font-size: 2.2rem;">Sé que no soy perfecto. Sé que me equivoco, que
+                a veces puedo ser un poco
+                distraído o que habrá días donde me falten los ánimos... Pero te prometo que, aún con todos mis
+                defectos, siempre intentar dar lo mejor de mí.</p>
+            <p class="promise-text promise-2">No te prometo cumplir cada uno de tus sueños, pero sí dar todo de mí para
+                hacerlos realidad.</p>
+            <p class="promise-text promise-3">No te prometo que nunca habrá problemas, pero sí prometo que nunca te
+                enfrentarás a ellos sola.</p>
+            <p class="promise-text promise-4">Te prometo mi lealtad más sincera, para que juntos aprendamos y seamos un
+                poco mejor cada día juntos.</p>
+            <p class="promise-text promise-5">Y te prometo que, pase lo que pase, siempre elegiré cuidarte, respetarte.
+            </p>
+        </div>
+    </div>
+
+    <div id="scene-future" class="scene">
+        <div class="future-container">
+            <div class="future-box">
+                <p style="margin-bottom: 25px;">Yo no sé qué es lo que pasará en el futuro...</p>
+                <h2 class="future-title delay-future" style="margin: 0; font-size: 3.5rem;">Pero quiero que estés tú en
+                    él.</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESCENA 4: LA PREGUNTA (El clímax de la propuesta) -->
+    <div id="scene-question" class="scene">
+        <div class="question-container">
+            <div class="beating-heart" style="margin-bottom: 30px;">❤️</div>
+            <h1 class="proposal-title">Anahí</h1>
+            <p class="proposal-subtitle"></p>
+            <div class="proposal-buttons">
+                <button id="btn-yes" class="btn-choice yes">Sí</button>
+                <button id="btn-no" class="btn-choice no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESCENA 5: EL FINAL CELEBRATIVO -->
+    <div id="scene-celebration" class="scene">
+        <!-- Canvas de fuegos artificiales -->
+        <canvas id="fireworks-canvas"></canvas>
+        <div class="celebration-container">
+            <div class="heart-grand">&#10084;&#65039;</div>
+            <h1 class="celebration-title">Esto es para siempre</h1>
+            <p class="celebration-line line-3">Gracias por estar a mi lado ahora ❤️</p>
+            <p class="celebration-line line-1">Ahora empieza lo mejor de nuestra historia...</p>
+            <p class="celebration-line line-2">Más momentos, más de nosotros, más salidas, cualquier cosa lo que sea que
+                tenga que venir, pero que solo sea nuestro.</p>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/fireworks.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/cinematic.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
