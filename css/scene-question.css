@@ -1,0 +1,96 @@
+/* --- SCENE 4: THE QUESTION (CLIMAX) --- */
+.question-container {
+    text-align: center;
+}
+
+.proposal-title {
+    font-family: var(--font-serif);
+    font-size: 6.5rem;
+    color: #ffffff;
+    /* Elegant pure white */
+    text-shadow: 0 0 25px rgba(255, 133, 179, 0.85), 0 0 10px rgba(214, 28, 78, 0.5);
+    /* Pink/red glow */
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.proposal-subtitle {
+    font-family: var(--font-cursive);
+    font-size: 4.8rem;
+    color: var(--color-text-light);
+    text-shadow: 0 0 15px rgba(255, 133, 179, 0.5);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2s ease 1s, transform 2s ease 1s;
+}
+
+.scene.active .proposal-title {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.scene.active .proposal-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Proposal Buttons (Yes and No) */
+.proposal-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease 2.5s, transform 2s ease 2.5s;
+    width: 100%;
+}
+
+.scene.active .proposal-buttons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-choice {
+    padding: 20px 55px;
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 10;
+    min-width: 150px;
+    text-align: center;
+}
+
+.btn-choice.yes {
+    background: #ffffff;
+    color: #1a0005;
+    border: 1px solid #ffffff;
+}
+
+.btn-choice.yes:hover {
+    background: linear-gradient(135deg, #d61c4e, #ff4d7d);
+    color: #ffffff;
+    border-color: #ff85b3;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 18px 45px rgba(214, 28, 78, 0.5), 0 0 20px rgba(255, 133, 179, 0.3);
+}
+
+.btn-choice.no {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Light border */
+    position: relative;
+    /* Will be set to absolute dynamically */
+    transition: left 0.3s cubic-bezier(0.25, 1, 0.5, 1), top 0.3s cubic-bezier(0.25, 1, 0.5, 1), transform 0.3s ease;
+}

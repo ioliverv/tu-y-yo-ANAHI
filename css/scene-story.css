@@ -1,0 +1,190 @@
+/* --- STYLES FOR NEW SCENE 1: DATING HISTORY --- */
+.story-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-card {
+    position: absolute;
+    width: 90%;
+    max-width: 800px;
+    padding: 45px 60px;
+    border-radius: 6px;
+    background-color: #fffcfc;
+    /* Soft watercolor white */
+    background-image:
+        radial-gradient(circle at 0% 0%, rgba(255, 182, 193, 0.3) 0%, transparent 45%),
+        radial-gradient(circle at 100% 100%, rgba(220, 20, 60, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 100% 0%, rgba(255, 192, 203, 0.22) 0%, transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(219, 112, 147, 0.22) 0%, transparent 40%),
+        radial-gradient(rgba(0, 0, 0, 0.01) 1px, transparent 0);
+    /* Watercolor paper texture */
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 8px 8px;
+    background-blend-mode: normal, normal, normal, normal, multiply;
+    border: 3px double #e8b89c;
+    /* Double border in rose gold/peach */
+    box-shadow:
+        0 40px 90px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(255, 133, 179, 0.25);
+    /* Subtle pink glow */
+    text-align: center;
+    font-family: var(--font-cursive);
+    font-size: 2.8rem;
+    line-height: 1.6;
+    color: #4a0e17;
+    /* Burgundy/red wine ink */
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    pointer-events: none;
+    /* To prevent them from blocking clicks */
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+/* Ajustes específicos para la carta (tarjeta 5) que tiene más texto */
+.story-card.step-5 {
+    font-size: 2.2rem;
+    padding-bottom: 70px;
+    /* More space at the bottom for the heart seal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.story-card::-webkit-scrollbar-thumb {
+    background-color: rgba(220, 20, 60, 0.3);
+    border-radius: 10px;
+}
+
+.intro-note {
+    position: absolute;
+    width: 85%;
+    max-width: 600px;
+    padding: 45px 55px;
+    border-radius: 4px;
+    background-color: #0c0205;
+    background-image: radial-gradient(circle at center, #2a0512 0%, #0c0205 100%);
+    border: 2px solid rgba(212, 175, 55, 0.8);
+    /* Classic gold */
+    outline: 1px solid rgba(212, 175, 55, 0.4);
+    outline-offset: -8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.15);
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    line-height: 1.6;
+    color: #fdfbf7;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.intro-note.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.intro-note.is-hidden-up {
+    opacity: 0;
+    transform: translateY(-30px) scale(1.05);
+}
+
+.story-card::before {
+    /* Soft contrast inner edge */
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(220, 20, 60, 0.12);
+    pointer-events: none;
+}
+
+.card-initials {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: #c2185b;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.story-card::after {
+    content: '❤';
+    position: absolute;
+    bottom: 25px;
+    right: 45px;
+    width: 55px;
+    height: 55px;
+    background: radial-gradient(circle, #ff6b8b 0%, #d81b60 100%);
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.4), 0 0 15px rgba(216, 27, 96, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    transform: rotate(-15deg);
+    opacity: 0.95;
+    font-family: var(--font-sans);
+    animation: sealPulse 2s infinite alternate;
+    z-index: 2;
+}
+
+.story-card .highlight-text {
+    color: #c2185b;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+/* JS-controlled transitions for story cards */
+.story-card {
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.story-card.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.story-card.is-hidden-up {
+    opacity: 0;
+    transform: translateY(-30px) scale(1.05);
+}
+
+/* Typewriter Effect - Blinking Cursor */
+.typing-container::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    color: #c2185b;
+    font-weight: bold;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

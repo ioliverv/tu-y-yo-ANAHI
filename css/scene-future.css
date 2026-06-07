@@ -1,0 +1,305 @@
+/* --- STYLES FOR NEW SCENE 2: STARRY FUTURE --- */
+#scene-future {
+    background-color: transparent;
+}
+
+.future-container {
+    text-align: center;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.future-box {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-style: italic;
+    color: #fdfbf7;
+    background-color: #0c0205;
+    background-image: radial-gradient(circle at center, #2a0512 0%, #0c0205 100%);
+    border: 2px solid rgba(212, 175, 55, 0.8);
+    outline: 1px solid rgba(212, 175, 55, 0.4);
+    outline-offset: -8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.15);
+    padding: 30px 45px;
+    border-radius: 4px;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.future-title {
+    font-family: var(--font-cursive);
+    font-size: 4.5rem;
+    color: var(--color-accent);
+    text-shadow: 0 0 15px rgba(255, 133, 179, 0.5);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.scene.active .future-box {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.scene.active .future-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .future-title.delay-future {
+    transition-delay: 2.5s;
+}
+
+/* --- NEW SCENE 3: REASONS --- */
+#scene-reasons {
+    background-color: transparent;
+}
+
+.reasons-container {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reasons-title {
+    font-family: var(--font-cursive);
+    font-size: 4rem;
+    color: var(--color-accent);
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 2s ease, transform 2s ease;
+    text-shadow: 0 0 15px rgba(255, 133, 179, 0.5);
+}
+
+.scene.active .reasons-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reason-bubble {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #fffcfc;
+    background: linear-gradient(135deg, #8B0000, #C2185B, #8B0000);
+    /* Elegant ribbon-style wine red */
+    border: 2px solid rgba(212, 175, 55, 0.8);
+    /* Classic gold border */
+    border-left: 5px double rgba(212, 175, 55, 0.9);
+    border-right: 5px double rgba(212, 175, 55, 0.9);
+    padding: 20px 45px;
+    border-radius: 6px;
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    position: absolute;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 20px rgba(194, 24, 91, 0.4);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+/* Crystal shine effect passing over */
+.reason-bubble::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transform: skewX(-25deg);
+    animation: crystalShine 8s infinite;
+}
+
+@keyframes crystalShine {
+    0% {
+        left: -150%;
+    }
+
+    15% {
+        left: 250%;
+    }
+
+    100% {
+        left: 250%;
+    }
+}
+
+/* Attractive random positions for bubbles */
+.bubble-1 {
+    top: 15%;
+    left: 15%;
+}
+
+.bubble-2 {
+    top: 30%;
+    right: 10%;
+}
+
+.bubble-3 {
+    top: 45%;
+    left: 10%;
+}
+
+.bubble-4 {
+    top: 60%;
+    right: 15%;
+}
+
+.bubble-5 {
+    top: 75%;
+    left: 20%;
+}
+
+.bubble-6 {
+    top: 20%;
+    right: 20%;
+}
+
+.bubble-7 {
+    top: 50%;
+    left: 15%;
+}
+
+.bubble-8 {
+    top: 70%;
+    right: 25%;
+}
+
+.bubble-9 {
+    top: 35%;
+    left: 25%;
+}
+
+.bubble-10 {
+    top: 65%;
+    right: 10%;
+}
+
+.bubble-11 {
+    top: 25%;
+    left: 10%;
+}
+
+.bubble-12 {
+    top: 80%;
+    right: 15%;
+}
+
+.bubble-13 {
+    top: 40%;
+    left: 10%;
+}
+
+.bubble-14 {
+    top: 55%;
+    right: 15%;
+}
+
+@keyframes bubbleFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-30px) scale(1.05);
+    }
+}
+
+.scene.active .bubble-1 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 2s;
+}
+
+.scene.active .bubble-2 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 9s;
+}
+
+.scene.active .bubble-3 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 16s;
+}
+
+.scene.active .bubble-4 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 23s;
+}
+
+.scene.active .bubble-5 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 30s;
+}
+
+.scene.active .bubble-6 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 37s;
+}
+
+.scene.active .bubble-7 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 44s;
+}
+
+.scene.active .bubble-8 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 51s;
+}
+
+.scene.active .bubble-9 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 58s;
+}
+
+.scene.active .bubble-10 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 65s;
+}
+
+.scene.active .bubble-11 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 72s;
+}
+
+.scene.active .bubble-12 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 79s;
+}
+
+.scene.active .bubble-13 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 86s;
+}
+
+.scene.active .bubble-14 {
+    animation: bubbleFloat 7.5s linear forwards;
+    animation-delay: 93s;
+}

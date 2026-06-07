@@ -1,0 +1,19 @@
+/* --- DESIGN SYSTEM AND VARIABLES --- */
+:root {
+    --bg-dark: #070002;
+    --bg-vignette: radial-gradient(circle, #2d020d 0%, #070002 100%);
+    --color-primary: #d61c4e;
+    /* Deep passion red */
+    --color-accent: #ff85b3;
+    /* Soft pink */
+    --color-gold: #ffd700;
+    /* Brilliant gold */
+    --color-text-light: #ffebef;
+    --color-paper: #fcfaf2;
+    /* Parchment paper */
+    --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.7);
+    --shadow-glow: 0 0 20px rgba(214, 28, 78, 0.5);
+    --font-serif: 'Cinzel', serif;
+    --font-cursive: 'Great Vibes', cursive;
+    --font-sans: 'Inter', sans-serif;
+}

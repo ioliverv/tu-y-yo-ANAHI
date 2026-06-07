@@ -1,0 +1,21 @@
+/* --- RESET AND BASE STRUCTURE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-dark);
+    background-image: var(--bg-vignette);
+    color: var(--color-text-light);
+    font-family: var(--font-sans);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* Hide scrollbars for cinematic projection */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

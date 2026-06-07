@@ -1,0 +1,93 @@
+/* --- GIANT BACKGROUND INITIALS --- */
+.background-initials {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: min(17vw, 15rem);
+    color: rgba(255, 133, 179, 0.12);
+    z-index: 2;
+    pointer-events: none;
+    white-space: nowrap;
+    text-shadow: 0 0 80px rgba(255, 133, 179, 0.35), 0 0 120px rgba(214, 28, 78, 0.2);
+    animation: pulseInitials 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseInitials {
+    0% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(0.97);
+    }
+
+    100% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(1.03);
+    }
+}
+
+/* --- BOKEH PARTICLES AND HEARTS OVERLAY --- */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(7, 0, 2, 0.4), rgba(45, 2, 13, 0.4));
+    pointer-events: none;
+    z-index: 1;
+}
+
+#particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    bottom: -50px;
+    background: radial-gradient(circle, rgba(255, 133, 179, 0.4) 0%, rgba(214, 28, 78, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: floatUp 15s linear infinite;
+}
+
+.heart-particle {
+    position: absolute;
+    bottom: -50px;
+    color: rgba(214, 28, 78, 0.45);
+    font-size: 20px;
+    pointer-events: none;
+    animation: floatUpHearts 12s ease-in infinite;
+}
+
+/* --- SCENE MANAGEMENT --- */
+.scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 4;
+    padding: 20px;
+}
+
+.scene.active {
+    opacity: 1;
+    visibility: visible;
+}
