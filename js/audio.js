@@ -43,7 +43,6 @@ function playMusicNow() {
 
     const targetVolume = 0.6;
     music.volume = targetVolume;
-    music.currentTime = 6;
 
     let isFadingOut = false;
     let isFadingIn = false;
@@ -80,8 +79,12 @@ function playMusicNow() {
     if (playPromise !== undefined) {
         playPromise.then(() => {
             console.log("Audio playback successfully initiated.");
+            // Safe to set currentTime after playback has started
+            if (music.currentTime < 6) music.currentTime = 6;
         }).catch(error => {
             console.warn("Audio playback failed to initiate. Error:", error);
         });
+    } else {
+        if (music.currentTime < 6) music.currentTime = 6;
     }
 }
